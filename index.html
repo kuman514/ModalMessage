@@ -4,20 +4,23 @@
     <head>
         <meta charset="utf-8">
         <title>Modal Message</title>
+        <link rel="stylesheet" href="css/style.css">
         <script src="js/write_message.js" type="text/javascript"></script>
     </head>
     <body>
-        <main>
-            <article class="write-message">
-                <textarea name="message" rows="8" cols="40"></textarea>
-                <input type="button" value="띄우기" onclick="onClickWriteMessage()">
-            </article>
-            <article class="warning">
-                <h2>주의사항</h2>
-                <ul>
-                    <li>메시지 입력 칸에 HTML 태그를 허용하지 않습니다</li>
-                </ul>
-            </article>
-        </main>
+        <section>
+            <main>
+                <article class="write-message">
+                    <textarea name="message" rows="8" cols="40"></textarea>
+                    <input class="inputbutton" type="button" value="띄우기" onclick="onClickWriteMessage()">
+                </article>
+                <article class="warning">
+                    <h2>주의사항</h2>
+                    <ul>
+                        <li>메시지 입력 칸에 HTML 태그를 허용하지 않습니다</li>
+                    </ul>
+                </article>
+            </main>
+        </section>
     </body>
 </html>
