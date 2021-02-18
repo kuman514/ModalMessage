@@ -4,12 +4,13 @@
     <head>
         <meta charset="utf-8">
         <title>Modal Message</title>
+        <script src="js/write_message.js" type="text/javascript"></script>
     </head>
     <body>
         <main>
             <article class="write-message">
-                <textarea name="name" rows="8" cols="40"></textarea>
-                <input type="button" value="띄우기">
+                <textarea name="message" rows="8" cols="40"></textarea>
+                <input type="button" value="띄우기" onclick="onClickWriteMessage()">
             </article>
             <article class="warning">
                 <h2>주의사항</h2>
