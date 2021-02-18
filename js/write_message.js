@@ -5,7 +5,7 @@ function onClickWriteMessage () {
 
 function sanitizeMessage () {
   let text = document.querySelector('textarea').value
-  text = text.replaceAll(new RegExp(/<*>/, 'g'), '')
+  text = text.replaceAll(/(<([^>]+)>)/g, '')
   return text
 }
 
@@ -15,11 +15,11 @@ function sendToModal (message) {
 }
 
 function openModal () {
-  let element = document.querySelector('.modal')
-  element.classList.remove('hidden')
+  //document.querySelector('.modal-overlay').style.backgroundColor = 'rgba(0, 0, 0, 0.4)'
+  document.querySelector('.modal').classList.remove('hidden')
 }
 
 function closeModal () {
-  let element = document.querySelector('.modal')
-  element.classList.add('hidden')
+  document.querySelector('.modal').classList.add('hidden')
+  //document.querySelector('.modal-overlay').style.backgroundColor = 'rgba(0, 0, 0, 0.0)'
 }
