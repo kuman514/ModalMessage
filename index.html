@@ -12,7 +12,7 @@
             <main>
                 <article class="write-message">
                     <textarea name="message" rows="8" cols="40"></textarea>
-                    <input class="inputbutton" type="button" value="띄우기" onclick="onClickWriteMessage()">
+                    <input class="inputbutton" type="button" value="띄우기" onclick="openModal()">
                 </article>
                 <article class="warning">
                     <h2>주의사항</h2>
@@ -27,8 +27,8 @@
             </div>
             <div class="modal-content">
                 <h2>메시지 내용</h2>
-                <p>모달창</p>
-                <input class="inputbutton" type="button" value="👌👌👌" onclick="">
+                <p class="modal-message">모달창</p>
+                <input class="inputbutton" type="button" value="👌👌👌" onclick="closeModal()">
             </div>
         </section>
     </body>
