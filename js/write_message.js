@@ -3,14 +3,9 @@ function onClickWriteMessage () {
   openModal()
 }
 
-function sanitizeMessage (deny = ['script', 'a']) {
+function sanitizeMessage () {
   let text = document.querySelector('textarea').value
-  // TODO: Sanitize HTML in text (to prevent XSS)
-  deny.forEach(tag => {
-    text = text.replaceAll(`<${tag}>`, '')
-    text = text.replaceAll(`</${tag}>`, '')
-  })
-  // End of my sanitizing HTML
+  text = text.replaceAll(new RegExp(/<*>/, 'g'), '')
   return text
 }
 
